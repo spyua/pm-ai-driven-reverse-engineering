@@ -166,16 +166,26 @@ public class Dog extends Animal {
 讓我們用專案中的範例來練習：
 
 **步驟1：開啟範例專案**
-```bash
-cd tutorial-sample-project/cloudy-account
-```
+1. 前往 https://github.com/spyua/cloudy_homework
+2. 點擊綠色的 "Code" 按鈕
+3. 選擇 "Download ZIP" 下載專案壓縮檔
+4. 解壓縮到您的工作目錄
 
 **步驟2：在 Cursor 中開啟專案**
-1. 使用 `Ctrl+O` 開啟資料夾
-2. 選擇 `cloudy-account` 目錄
-3. 觀察 Cursor 如何建立專案索引
+1. 開啟 Cursor IDE
+2. 點擊 "File" → "Open Folder"（或使用快捷鍵 `Ctrl+K Ctrl+O`）
+3. 導航到解壓縮的資料夾，選擇整個 `cloudy_homework` 目錄
+4. 點擊 "選擇資料夾" 按鈕
+5. 等待 Cursor 建立專案索引（右下角會顯示進度）
 
-**步驟3：分析控制器類別**
+> 💡 **PM小提示**：不需要使用終端機！Cursor IDE 的圖形介面就能完成所有操作。
+
+**步驟3：透過檔案總管瀏覽專案結構**
+1. 在左側檔案總管中，點擊展開各個資料夾
+2. 找到 `src/main/java/com/ck/account/controller/` 目錄
+3. 雙擊 `AccountController.java` 檔案開啟
+
+**步驟4：分析控制器類別**
 ```java
 // src/main/java/com/ck/account/controller/AccountController.java
 @RestController
@@ -193,11 +203,14 @@ public class AccountController {
 }
 ```
 
-**🎯 練習任務**：
-1. 將游標放在 `AccountController` 類別上
-2. 按 `Ctrl+L` 開啟 Cursor Chat
-3. 詢問：「請分析這個控制器的設計模式和依賴關係」
-4. 觀察 AI 如何利用自動上下文回答
+**🎯 PM專用練習任務**：
+1. 將游標放在 `AccountController` 類別名稱上
+2. 按 `Ctrl+L` 開啟 Cursor Chat（或點擊右側的聊天面板）
+3. 在聊天框中詢問：「請從產品經理的角度分析這個帳戶控制器的業務功能，它提供了哪些API功能？」
+4. 觀察 AI 如何從業務角度解釋技術程式碼
+5. 進一步詢問：「這個API設計對用戶體驗有什麼影響？」
+
+> 💡 **重點提醒**：重點關注業務邏輯而非技術細節，思考這些程式碼如何支撐產品功能。
 
 ### 📍 演練2：多檔案上下文組合
 
@@ -653,16 +666,26 @@ public class Dog extends Animal {
 讓我們用專案中的範例來練習：
 
 **步驟1：開啟範例專案**
-```bash
-cd tutorial-sample-project/cloudy-account
-```
+1. 前往 https://github.com/spyua/cloudy_homework
+2. 點擊綠色的 "Code" 按鈕
+3. 選擇 "Download ZIP" 下載專案壓縮檔
+4. 解壓縮到您的工作目錄
 
 **步驟2：在 Cursor 中開啟專案**
-1. 使用 `Ctrl+O` 開啟資料夾
-2. 選擇 `cloudy-account` 目錄
-3. 觀察 Cursor 如何建立專案索引
+1. 開啟 Cursor IDE
+2. 點擊 "File" → "Open Folder"（或使用快捷鍵 `Ctrl+K Ctrl+O`）
+3. 導航到解壓縮的資料夾，選擇整個 `cloudy_homework` 目錄
+4. 點擊 "選擇資料夾" 按鈕
+5. 等待 Cursor 建立專案索引（右下角會顯示進度）
 
-**步驟3：分析控制器類別**
+> 💡 **PM小提示**：不需要使用終端機！Cursor IDE 的圖形介面就能完成所有操作。
+
+**步驟3：透過檔案總管瀏覽專案結構**
+1. 在左側檔案總管中，點擊展開各個資料夾
+2. 找到 `src/main/java/com/ck/account/controller/` 目錄
+3. 雙擊 `AccountController.java` 檔案開啟
+
+**步驟4：分析控制器類別**
 ```java
 // src/main/java/com/ck/account/controller/AccountController.java
 @RestController
@@ -680,11 +703,14 @@ public class AccountController {
 }
 ```
 
-**🎯 練習任務**：
-1. 將游標放在 `AccountController` 類別上
-2. 按 `Ctrl+L` 開啟 Cursor Chat
-3. 詢問：「請分析這個控制器的設計模式和依賴關係」
-4. 觀察 AI 如何利用自動上下文回答
+**🎯 PM專用練習任務**：
+1. 將游標放在 `AccountController` 類別名稱上
+2. 按 `Ctrl+L` 開啟 Cursor Chat（或點擊右側的聊天面板）
+3. 在聊天框中詢問：「請從產品經理的角度分析這個帳戶控制器的業務功能，它提供了哪些API功能？」
+4. 觀察 AI 如何從業務角度解釋技術程式碼
+5. 進一步詢問：「這個API設計對用戶體驗有什麼影響？」
+
+> 💡 **重點提醒**：重點關注業務邏輯而非技術細節，思考這些程式碼如何支撐產品功能。
 
 ### 📍 演練2：多檔案上下文組合
 

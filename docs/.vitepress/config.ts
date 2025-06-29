@@ -106,7 +106,7 @@ export default defineConfig({
     },
     
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-username/pm-ai-driven-reverse-engineering' }
+      { icon: 'github', link: 'https://github.com/spyua/pm-ai-driven-reverse-engineering' }
     ],
     
     footer: {
@@ -140,7 +140,7 @@ export default defineConfig({
     },
     
     editLink: {
-      pattern: 'https://github.com/your-username/pm-ai-driven-reverse-engineering/edit/main/docs/:path',
+      pattern: 'https://github.com/spyua/pm-ai-driven-reverse-engineering/edit/main/docs/:path',
       text: '在 GitHub 上編輯此頁面'
     },
     

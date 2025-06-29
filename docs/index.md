@@ -6,7 +6,7 @@ hero:
   text: "使用AI工具進行程式碼分析的完整學習系統"
   tagline: "🤖 掌握Cursor編輯器，建立高效的程式碼分析思維"
   image:
-    src: /logo.png
+    src: /logo.svg
     alt: AI驅動逆向工程
   actions:
     - theme: brand
@@ -17,7 +17,7 @@ hero:
       link: /resources/
     - theme: alt
       text: 📋 GitHub 專案
-      link: https://github.com/your-username/pm-ai-driven-reverse-engineering
+      link: https://github.com/spyua/pm-ai-driven-reverse-engineering
 
 features:
   - icon: 🎯
@@ -103,10 +103,10 @@ features:
 
 本專案歡迎社群貢獻！您可以：
 
-- 🐛 [回報問題](https://github.com/your-username/pm-ai-driven-reverse-engineering/issues)
-- 💡 [提出建議](https://github.com/your-username/pm-ai-driven-reverse-engineering/discussions)  
-- 📝 [改進文檔](https://github.com/your-username/pm-ai-driven-reverse-engineering/pulls)
-- ⭐ [給專案加星](https://github.com/your-username/pm-ai-driven-reverse-engineering)
+- 🐛 [回報問題](https://github.com/spyua/pm-ai-driven-reverse-engineering/issues)
+- 💡 [提出建議](https://github.com/spyua/pm-ai-driven-reverse-engineering/discussions)  
+- 📝 [改進文檔](https://github.com/spyua/pm-ai-driven-reverse-engineering/pulls)
+- ⭐ [給專案加星](https://github.com/spyua/pm-ai-driven-reverse-engineering)
 
 ---
 
