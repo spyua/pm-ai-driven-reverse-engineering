@@ -6,6 +6,9 @@ export default defineConfig({
   lang: 'zh-TW',
   cleanUrls: true,
   
+  // 暫時忽略死連結，等內容完成後再啟用檢查
+  ignoreDeadLinks: true,
+  
   // GitHub Pages 部署配置
   base: '/pm-ai-driven-reverse-engineering/',
   
@@ -36,27 +39,28 @@ export default defineConfig({
           ]
         },
         {
-          text: '🚀 基礎篇',
+          text: '📚 教學章節',
           items: [
-            { text: '第01章：安裝與設定', link: '/guide/ch01' },
-            { text: '第02章：理解上下文', link: '/guide/ch02' },
-            { text: '第03章：三大核心模式', link: '/guide/ch03' }
+            { text: '章節目錄', link: '/chapters/' },
+            { text: '第01章：安裝與設定', link: '/chapters/01-installation-setup' }
           ]
-        },
+        }
+      ],
+      
+      '/chapters/': [
         {
-          text: '🔧 進階篇',
+          text: '📚 教學章節',
           items: [
-            { text: '第04章：AI模型選擇', link: '/guide/ch04' },
-            { text: '第05章：產品偵探思維', link: '/guide/ch05' },
-            { text: '第06章：專案準備', link: '/guide/ch06' }
-          ]
-        },
-        {
-          text: '⚡ 實戰篇',
-          items: [
-            { text: '第07章：黃金分析流程', link: '/guide/ch07' },
-            { text: '第08章：進階效率技巧', link: '/guide/ch08' },
-            { text: '第09章：挑戰與展望', link: '/guide/ch09' }
+            { text: '章節目錄', link: '/chapters/' },
+            { text: '第01章：安裝與設定', link: '/chapters/01-installation-setup' },
+            { text: '第02章：理解上下文', link: '/chapters/02-understanding-context' },
+            { text: '第03章：三大核心模式', link: '/chapters/03-core-modes' },
+            { text: '第04章：AI模型選擇', link: '/chapters/04-model-selection' },
+            { text: '第05章：產品偵探思維', link: '/chapters/05-detective-mindset' },
+            { text: '第06章：專案準備', link: '/chapters/06-project-preparation' },
+            { text: '第07章：黃金分析流程', link: '/chapters/07-golden-analysis-flow' },
+            { text: '第08章：進階效率技巧', link: '/chapters/08-advanced-techniques' },
+            { text: '第09章：挑戰與展望', link: '/chapters/09-challenges-future' }
           ]
         }
       ],

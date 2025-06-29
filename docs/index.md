@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 🚀 開始學習
-      link: /guide/
+      link: /chapters/01-installation-setup
     - theme: alt
       text: 📚 查看資源
       link: /resources/
@@ -114,7 +114,7 @@ features:
 
 ## 🚀 準備開始學習？
 
-[立即開始 →](/guide/)
+[立即開始 →](/chapters/01-installation-setup)
 
 </div>
 
