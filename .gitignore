@@ -19,9 +19,6 @@ dist/
 .DS_Store
 Thumbs.db
 
-# Content source (development materials, not for end users)
-.content-source/
-
 # VitePress
 docs/.vitepress/cache/
 docs/.vitepress/dist/
