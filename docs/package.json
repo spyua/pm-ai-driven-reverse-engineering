@@ -1,0 +1,23 @@
+{
+  "name": "ai-driven-reverse-engineering-tutorial",
+  "version": "1.0.0",
+  "description": "AI驅動逆向工程教學專案",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=8080 --open=/index.html",
+    "build": "mkdir -p dist && cp -r * dist/ 2>/dev/null || true",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "AI",
+    "reverse-engineering",
+    "cursor",
+    "tutorial",
+    "chinese"
+  ],
+  "author": "AI Tutorial Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+} 
