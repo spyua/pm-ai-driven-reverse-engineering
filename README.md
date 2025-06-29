@@ -26,38 +26,35 @@
 8. **進階效率技巧** - 提升分析效率的進階技巧
 9. **挑戰與展望** - 實際挑戰應對與未來發展
 
-## 🚀 快速開始
+## 🚀 開始學習
 
-### 前置需求
-- Cursor 編輯器
-- Node.js 18+
-- Git
+### 線上閱讀（推薦）
+📖 [線上教學網站](https://your-username.github.io/pm-ai-driven-reverse-engineering)
 
-### 本地開發
+### 本地運行
 ```bash
 # 複製專案
 git clone https://github.com/your-username/pm-ai-driven-reverse-engineering.git
 cd pm-ai-driven-reverse-engineering
 
-# 安裝依賴並啟動
-cd docs
-npm install
-npm run dev
+# 啟動教學網站
+cd docs && npm install && npm run docs:dev
 ```
 
-### 線上閱讀
-📖 [線上教學網站](https://your-username.github.io/pm-ai-driven-reverse-engineering)
+### 前置需求
+- Cursor 編輯器（主要學習工具）
+- Node.js 18+（運行教學網站）
+- Git（複製專案）
 
 ## 📁 專案結構
 
 ```
 pm-ai-driven-reverse-engineering/
-├── docs/                       # VitePress 文檔網站
-├── tutorial-plan/              # 章節規劃指南
-├── tutorial-material/          # 教學素材
-├── tutorial-sample-project/    # 範例專案（Cloudy微服務）
-├── reverse-system-prompt/      # AI系統提示模板
-└── DEVELOPMENT_GUIDE.md        # 開發指南（供Claude Agent使用）
+├── docs/                       # 教學網站（主要學習內容）
+│   └── chapters/               # 9個完整教學章節
+├── tutorial-sample-project/    # 實作範例專案（Cloudy微服務）
+├── reverse-system-prompt/      # AI分析提示模板
+└── .content-source/            # 開發素材（維護者使用）
 ```
 
 ## 🛠️ 開發資源
@@ -100,9 +97,9 @@ pm-ai-driven-reverse-engineering/
 
 ## 🙋‍♂️ 支援與協助
 
-- 📖 [開發指南](DEVELOPMENT_GUIDE.md)
 - 🐛 [問題回報](https://github.com/your-username/pm-ai-driven-reverse-engineering/issues)
 - 💬 [討論區](https://github.com/your-username/pm-ai-driven-reverse-engineering/discussions)
+- 📖 [維護者指南](CLAUDE.md)（供 AI 開發助手使用）
 
 ---
 
