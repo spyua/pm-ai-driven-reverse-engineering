@@ -975,79 +975,79 @@ class SmartReportGenerator:
         """初始化報告模板"""
         
         # 執行摘要模板
-        executive_template = """# {{ project_name }} 程式碼分析報告
+        executive_template = """# &#123;&#123; project_name &#125;&#125; 程式碼分析報告
 
 ## 📋 執行摘要
 
-**分析日期**: {{ analysis_date }}
-**分析師**: {{ analyst_name }}
-**專案版本**: {{ project_version }}
+**分析日期**: &#123;&#123; analysis_date &#125;&#125;
+**分析師**: &#123;&#123; analyst_name &#125;&#125;
+**專案版本**: &#123;&#123; project_version &#125;&#125;
 
 ### 🎯 整體評估
 
 | 評估項目 | 評分 | 狀態 |
 |----------|------|------|
-| 程式碼品質 | {{ code_quality_score }}/100 | {{ quality_status }} |
-| 安全性 | {{ security_score }}/100 | {{ security_status }} |
-| 可維護性 | {{ maintainability_score }}/100 | {{ maintainability_status }} |
-| 效能 | {{ performance_score }}/100 | {{ performance_status }} |
+| 程式碼品質 | &#123;&#123; code_quality_score &#125;&#125;/100 | &#123;&#123; quality_status &#125;&#125; |
+| 安全性 | &#123;&#123; security_score &#125;&#125;/100 | &#123;&#123; security_status &#125;&#125; |
+| 可維護性 | &#123;&#123; maintainability_score &#125;&#125;/100 | &#123;&#123; maintainability_status &#125;&#125; |
+| 效能 | &#123;&#123; performance_score &#125;&#125;/100 | &#123;&#123; performance_status &#125;&#125; |
 
 ### 🏆 主要優勢
-{% for strength in strengths %}
-- {{ strength }}
-{% endfor %}
+&#123;% for strength in strengths %&#125;
+- &#123;&#123; strength &#125;&#125;
+&#123;% endfor %&#125;
 
 ### ⚠️ 關鍵問題
-{% for issue in critical_issues %}
-- **{{ issue.severity }}**: {{ issue.description }}
-{% endfor %}
+&#123;% for issue in critical_issues %&#125;
+- **&#123;&#123; issue.severity &#125;&#125;**: &#123;&#123; issue.description &#125;&#125;
+&#123;% endfor %&#125;
 
 ### 💡 建議行動
-{% for action in recommended_actions %}
-- **{{ action.priority }}**: {{ action.description }} (預估工時: {{ action.effort }})
-{% endfor %}
+&#123;% for action in recommended_actions %&#125;
+- **&#123;&#123; action.priority &#125;&#125;**: &#123;&#123; action.description &#125;&#125; (預估工時: &#123;&#123; action.effort &#125;&#125;)
+&#123;% endfor %&#125;
 
 ## 📊 詳細分析
 
-{{ detailed_analysis }}
+&#123;&#123; detailed_analysis &#125;&#125;
 
 ## 🎯 改進路線圖
 
 ### 立即行動 (1週內)
-{% for item in immediate_actions %}
-- [ ] {{ item }}
-{% endfor %}
+&#123;% for item in immediate_actions %&#125;
+- [ ] &#123;&#123; item &#125;&#125;
+&#123;% endfor %&#125;
 
 ### 短期目標 (1個月內)
-{% for item in short_term_goals %}
-- [ ] {{ item }}
-{% endfor %}
+&#123;% for item in short_term_goals %&#125;
+- [ ] &#123;&#123; item &#125;&#125;
+&#123;% endfor %&#125;
 
 ### 長期規劃 (3個月內)
-{% for item in long_term_plans %}
-- [ ] {{ item }}
-{% endfor %}
+&#123;% for item in long_term_plans %&#125;
+- [ ] &#123;&#123; item &#125;&#125;
+&#123;% endfor %&#125;
 
 ---
 *本報告由智能分析系統自動生成*
 """
         
         # 技術詳細模板
-        technical_template = """# {{ project_name }} 技術分析詳細報告
+        technical_template = """# &#123;&#123; project_name &#125;&#125; 技術分析詳細報告
 
 ## 🏗️ 架構分析
 
 ### 整體架構
-{{ architecture_overview }}
+&#123;&#123; architecture_overview &#125;&#125;
 
 ### 技術棧
-{% for tech in tech_stack %}
-- **{{ tech.name }}**: {{ tech.version }} {% if tech.status == 'outdated' %}⚠️ 需要更新{% elif tech.status == 'latest' %}✅ 最新版本{% endif %}
-{% endfor %}
+&#123;% for tech in tech_stack %&#125;
+- **&#123;&#123; tech.name &#125;&#125;**: &#123;&#123; tech.version &#125;&#125; &#123;% if tech.status == 'outdated' %&#125;⚠️ 需要更新&#123;% elif tech.status == 'latest' %&#125;✅ 最新版本&#123;% endif %&#125;
+&#123;% endfor %&#125;
 
 ### 模組依賴關係
 ```mermaid
-{{ dependency_diagram }}
+&#123;&#123; dependency_diagram &#125;&#125;
 ```
 
 ## 💻 程式碼品質分析
@@ -1055,112 +1055,112 @@ class SmartReportGenerator:
 ### 品質指標
 | 指標 | 當前值 | 目標值 | 狀態 |
 |------|--------|--------|------|
-{% for metric in quality_metrics %}
-| {{ metric.name }} | {{ metric.current }} | {{ metric.target }} | {{ metric.status_icon }} |
-{% endfor %}
+&#123;% for metric in quality_metrics %&#125;
+| &#123;&#123; metric.name &#125;&#125; | &#123;&#123; metric.current &#125;&#125; | &#123;&#123; metric.target &#125;&#125; | &#123;&#123; metric.status_icon &#125;&#125; |
+&#123;% endfor %&#125;
 
 ### 程式碼異味
-{% for smell in code_smells %}
-#### {{ smell.type }}
-- **位置**: {{ smell.location }}
-- **描述**: {{ smell.description }}
-- **建議**: {{ smell.recommendation }}
-{% endfor %}
+&#123;% for smell in code_smells %&#125;
+#### &#123;&#123; smell.type &#125;&#125;
+- **位置**: &#123;&#123; smell.location &#125;&#125;
+- **描述**: &#123;&#123; smell.description &#125;&#125;
+- **建議**: &#123;&#123; smell.recommendation &#125;&#125;
+&#123;% endfor %&#125;
 
 ## 🔒 安全性分析
 
 ### 安全檢查結果
-{% for check in security_checks %}
-- **{{ check.category }}**: {{ check.status_icon }} {{ check.description }}
-{% endfor %}
+&#123;% for check in security_checks %&#125;
+- **&#123;&#123; check.category &#125;&#125;**: &#123;&#123; check.status_icon &#125;&#125; &#123;&#123; check.description &#125;&#125;
+&#123;% endfor %&#125;
 
 ### 發現的漏洞
-{% for vulnerability in vulnerabilities %}
-#### {{ vulnerability.severity }} - {{ vulnerability.type }}
-- **描述**: {{ vulnerability.description }}
-- **影響**: {{ vulnerability.impact }}
-- **修復建議**: {{ vulnerability.fix }}
-{% endfor %}
+&#123;% for vulnerability in vulnerabilities %&#125;
+#### &#123;&#123; vulnerability.severity &#125;&#125; - &#123;&#123; vulnerability.type &#125;&#125;
+- **描述**: &#123;&#123; vulnerability.description &#125;&#125;
+- **影響**: &#123;&#123; vulnerability.impact &#125;&#125;
+- **修復建議**: &#123;&#123; vulnerability.fix &#125;&#125;
+&#123;% endfor %&#125;
 
 ## ⚡ 效能分析
 
 ### 效能瓶頸
-{% for bottleneck in performance_bottlenecks %}
-- **{{ bottleneck.component }}**: {{ bottleneck.description }}
-  - 影響程度: {{ bottleneck.impact }}
-  - 優化建議: {{ bottleneck.optimization }}
-{% endfor %}
+&#123;% for bottleneck in performance_bottlenecks %&#125;
+- **&#123;&#123; bottleneck.component &#125;&#125;**: &#123;&#123; bottleneck.description &#125;&#125;
+  - 影響程度: &#123;&#123; bottleneck.impact &#125;&#125;
+  - 優化建議: &#123;&#123; bottleneck.optimization &#125;&#125;
+&#123;% endfor %&#125;
 
 ### 資源使用
-{{ resource_usage_chart }}
+&#123;&#123; resource_usage_chart &#125;&#125;
 
 ## 🧪 測試分析
 
 ### 測試覆蓋率
-- **整體覆蓋率**: {{ test_coverage.overall }}%
-- **線覆蓋率**: {{ test_coverage.line }}%
-- **分支覆蓋率**: {{ test_coverage.branch }}%
+- **整體覆蓋率**: &#123;&#123; test_coverage.overall &#125;&#125;%
+- **線覆蓋率**: &#123;&#123; test_coverage.line &#125;&#125;%
+- **分支覆蓋率**: &#123;&#123; test_coverage.branch &#125;&#125;%
 
 ### 測試品質
-{% for quality_issue in test_quality_issues %}
-- {{ quality_issue }}
-{% endfor %}
+&#123;% for quality_issue in test_quality_issues %&#125;
+- &#123;&#123; quality_issue &#125;&#125;
+&#123;% endfor %&#125;
 
 ---
-*詳細技術分析報告 - {{ generation_timestamp }}*
+*詳細技術分析報告 - &#123;&#123; generation_timestamp &#125;&#125;*
 """
 
         # 管理摘要模板
-        management_template = """# {{ project_name }} 管理摘要報告
+        management_template = """# &#123;&#123; project_name &#125;&#125; 管理摘要報告
 
 ## 📈 業務影響評估
 
-### 專案健康度評分: {{ overall_health_score }}/100
+### 專案健康度評分: &#123;&#123; overall_health_score &#125;&#125;/100
 
 ### 風險評估
 | 風險類別 | 風險等級 | 業務影響 | 建議處理時間 |
 |----------|----------|----------|--------------|
-{% for risk in business_risks %}
-| {{ risk.category }} | {{ risk.level }} | {{ risk.impact }} | {{ risk.timeline }} |
-{% endfor %}
+&#123;% for risk in business_risks %&#125;
+| &#123;&#123; risk.category &#125;&#125; | &#123;&#123; risk.level &#125;&#125; | &#123;&#123; risk.impact &#125;&#125; | &#123;&#123; risk.timeline &#125;&#125; |
+&#123;% endfor %&#125;
 
 ### 投資回報分析
-- **當前技術債務成本**: {{ tech_debt_cost }}
-- **建議改進投資**: {{ improvement_investment }}
-- **預期投資回報**: {{ expected_roi }}
-- **回報週期**: {{ payback_period }}
+- **當前技術債務成本**: &#123;&#123; tech_debt_cost &#125;&#125;
+- **建議改進投資**: &#123;&#123; improvement_investment &#125;&#125;
+- **預期投資回報**: &#123;&#123; expected_roi &#125;&#125;
+- **回報週期**: &#123;&#123; payback_period &#125;&#125;
 
 ## 🎯 策略建議
 
 ### 優先級矩陣
 ```
-高影響 | {{ high_impact_high_effort }} | {{ high_impact_low_effort }}
+高影響 | &#123;&#123; high_impact_high_effort &#125;&#125; | &#123;&#123; high_impact_low_effort &#125;&#125;
        |---------------------------|---------------------------
-低影響 | {{ low_impact_high_effort }}  | {{ low_impact_low_effort }}
+低影響 | &#123;&#123; low_impact_high_effort &#125;&#125;  | &#123;&#123; low_impact_low_effort &#125;&#125;
        |     高成本        |     低成本
 ```
 
 ### 資源分配建議
-{% for allocation in resource_allocations %}
-- **{{ allocation.area }}**: {{ allocation.percentage }}% ({{ allocation.justification }})
-{% endfor %}
+&#123;% for allocation in resource_allocations %&#125;
+- **&#123;&#123; allocation.area &#125;&#125;**: &#123;&#123; allocation.percentage &#125;&#125;% (&#123;&#123; allocation.justification &#125;&#125;)
+&#123;% endfor %&#125;
 
 ## 📊 競爭力分析
 
 ### 技術成熟度
-- **當前狀態**: {{ current_maturity_level }}
-- **行業平均**: {{ industry_average }}
-- **差距分析**: {{ maturity_gap }}
+- **當前狀態**: &#123;&#123; current_maturity_level &#125;&#125;
+- **行業平均**: &#123;&#123; industry_average &#125;&#125;
+- **差距分析**: &#123;&#123; maturity_gap &#125;&#125;
 
 ### 創新機會
-{% for opportunity in innovation_opportunities %}
-- **{{ opportunity.area }}**: {{ opportunity.description }}
-  - 預期效益: {{ opportunity.benefit }}
-  - 實施難度: {{ opportunity.difficulty }}
-{% endfor %}
+&#123;% for opportunity in innovation_opportunities %&#125;
+- **&#123;&#123; opportunity.area &#125;&#125;**: &#123;&#123; opportunity.description &#125;&#125;
+  - 預期效益: &#123;&#123; opportunity.benefit &#125;&#125;
+  - 實施難度: &#123;&#123; opportunity.difficulty &#125;&#125;
+&#123;% endfor %&#125;
 
 ---
-*管理決策支援報告 - {{ generation_timestamp }}*
+*管理決策支援報告 - &#123;&#123; generation_timestamp &#125;&#125;*
 """
 
         # 保存模板
