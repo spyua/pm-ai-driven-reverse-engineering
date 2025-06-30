@@ -39,6 +39,22 @@
 - **解決方案**: 添加結構化的錯誤處理表格
 - **位置**: docs/chapters/06-project-preparation.md (第330-335行)
 
+### 6. GitHub Pages章節目錄顯示問題修正 (2024-12-30)
+- **問題**: 教學指南左側章節目錄顯示不完整，章節目錄點擊404
+- **根本原因**: 
+  - VitePress sidebar配置中/guide/路徑只顯示第01章
+  - 缺少chapters/index.md檔案導致章節目錄頁面404
+- **解決方案**:
+  - **創建chapters/index.md**: 完整的章節目錄頁面，包含所有9章的狀態和學習路徑
+  - **更新VitePress sidebar配置**: /guide/路徑下顯示完整的9個章節連結
+  - **章節狀態更新**: 根據實際完成情況更新章節狀態標記
+- **修正效果**:
+  - ✅ 教學指南sidebar顯示完整的9個章節
+  - ✅ 章節目錄頁面正常顯示，無404錯誤
+  - ✅ 學習路徑和進度追蹤功能完整
+  - ✅ 章節狀態準確反映開發進度
+- **位置**: docs/chapters/index.md, docs/.vitepress/config.ts
+
 ## 重要配置變更
 
 ### 新版Cursor Rules配置結構 (現代化)
@@ -64,6 +80,12 @@
 - 💡 PM行動建議
 ```
 
+### VitePress sidebar配置優化
+更新了sidebar配置，確保：
+- /guide/路徑下顯示完整的9個教學章節
+- /chapters/路徑下的章節導航完整
+- 所有章節連結正確且無404錯誤
+
 ### 專案下載指引標準化
 所有章節現在統一使用：
 1. 前往 https://github.com/spyua/cloudy_homework
@@ -76,4 +98,5 @@
 - 圖片資源路徑已修正為相對路徑
 - GitHub連結已更新為正確的repository
 - **新增**: Cursor Rules系統相容性已驗證
-- **新增**: 構建測試通過(9.26秒)
+- **新增**: 構建測試通過(8.07秒)
+- **新增**: GitHub Pages章節導航完整可用

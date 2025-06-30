@@ -42,7 +42,15 @@ export default defineConfig({
           text: '📚 教學章節',
           items: [
             { text: '章節目錄', link: '/chapters/' },
-            { text: '第01章：安裝與設定', link: '/chapters/01-installation-setup' }
+            { text: '第01章：安裝與設定', link: '/chapters/01-installation-setup' },
+            { text: '第02章：理解上下文', link: '/chapters/02-understanding-context' },
+            { text: '第03章：三大核心模式', link: '/chapters/03-core-modes' },
+            { text: '第04章：AI模型選擇', link: '/chapters/04-model-selection' },
+            { text: '第05章：產品偵探思維', link: '/chapters/05-detective-mindset' },
+            { text: '第06章：專案準備', link: '/chapters/06-project-preparation' },
+            { text: '第07章：黃金分析流程', link: '/chapters/07-golden-analysis-flow' },
+            { text: '第08章：進階效率技巧', link: '/chapters/08-advanced-techniques' },
+            { text: '第09章：挑戰與展望', link: '/chapters/09-challenges-future' }
           ]
         }
       ],
