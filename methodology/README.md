@@ -7,6 +7,9 @@
 ```
 methodology/
 ├── README.md                           # 本說明檔案
+├── project-onboarding-workflow.md     # 新專案30分鐘初始化完整流程 ⭐
+├── post-initial-optimization-guide.md # 初始化後持續優化指南 ⭐
+├── quick-reference-templates.md       # 可直接使用的操作模板集 ⭐
 ├── ai-memory-management/               # AI記憶管理方法論
 │   ├── serena-memory-rules.md         # Serena Memory管理規範
 │   ├── memory-integration-strategy.md  # 記憶整合策略
@@ -45,14 +48,26 @@ methodology/
 
 ## 🚀 使用指南
 
-### 新專案啟動
-1. 閱讀 `ai-memory-management/` 中的記憶管理規範
-2. 應用 `dependency-management/` 中的依賴管理框架
-3. 使用 `prompt-engineering/` 中的提示設計模式
-4. 建立 `project-collaboration/` 中的協作工作流
+### ⚡ 新專案快速啟動 (30分鐘)
+1. **使用 `project-onboarding-workflow.md`** - 完整的三階段初始化流程
+2. **執行 `quick-reference-templates.md`** - 可直接複製的標準操作模板
+3. **建立核心Memory架構** - 6個基礎Memory確保專案基礎穩固
+4. **啟動依賴管理機制** - 預防性的依賴關係管理
 
-### 問題解決
-1. 查閱相關方法論文檔
+### 🔄 持續優化工作流
+1. **跟隨 `post-initial-optimization-guide.md`** - 初始化後的系統化改進
+2. **週度改進循環** - 每週15分鐘的效率提升檢查
+3. **個人化工作流程** - 基於實際使用體驗的客製化調整
+4. **預防性維護** - 主動識別和解決潛在問題
+
+### 🛠️ 日常操作支援
+1. **使用標準化模板** - 減少重複性工作的思考成本
+2. **執行檢查清單** - 確保重要步驟不遺漏
+3. **快速故障恢復** - 緊急情況的標準化應對流程
+4. **品質持續保證** - 定期健康檢查和優化
+
+### 📚 深度學習路徑
+1. 查閱專題方法論文檔 (`ai-memory-management/`, `dependency-management/` 等)
 2. 應用標準化的問題分析流程
 3. 執行系統性的解決方案
 4. 記錄經驗並更新方法論
