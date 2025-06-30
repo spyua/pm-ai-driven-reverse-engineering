@@ -79,6 +79,32 @@
 - **學習流程優化**: 安裝設定 → 基本操作 → 深入功能，建立更順暢的學習曲線
 - **位置**: docs/chapters/01-installation-setup.md (新增約200行PM專用內容)
 
+### 8. 第3章專業Prompt檔案使用指南補強 (2025-06-30 重大更新)
+- **問題**: 第3章提到四大分析模式和九大模板，但沒有教PM如何實際使用reverse-system-prompt資料夾中的專業prompt檔案
+- **用戶反饋**: "PM不知道如何設定cursor rule，也沒具體提到要怎麼設置這一塊"
+- **解決方案**:
+  - **新增科普解釋**: 用生活化比喻解釋Cursor Rules的工作原理和價值
+  - **三種Rules類型科普**: User Rules、Project Rules、Memory Rules的區別和使用場景
+  - **具體SOP步驟**: 詳細的三步驟專業分析法，從選擇到執行的完整流程
+  - **專業Prompt檔案使用指南**: 
+    - 四大核心顧問檔案的使用方法
+    - 九大專業分析模板的組合策略
+    - 完整的檔案路徑對應表
+    - 實戰示範和預期輸出格式
+  - **更新所有分析模式**: 將原本的簡單提問框架升級為使用專業prompt檔案的SOP
+  - **綜合模板應用**: 展示如何同時使用多個prompt檔案進行複雜分析
+- **技術特色**:
+  - 科普化的解釋方式，降低PM學習門檻
+  - 具體的檔案操作步驟，避免理論空談
+  - 標準化的SOP流程，確保分析品質
+  - 豐富的使用情境範例和組合策略
+- **學習效果提升**:
+  - PM能理解技術背後的邏輯，不只是機械操作
+  - 明確的成功/失敗判斷標準
+  - 實際可執行的操作指南
+  - 專業級分析能力的系統性培養
+- **位置**: docs/chapters/03-core-modes.md (新增3.1.4節專業Prompt檔案使用SOP)
+
 ## 重要配置變更
 
 ### 新版Cursor Rules配置結構 (現代化)
@@ -104,6 +130,32 @@
 - 💡 PM行動建議
 ```
 
+### 專業Prompt檔案使用體系 (新增)
+```markdown
+## 四大核心顧問檔案
+- analyzer-system.prompt.md - 系統架構師（系統全貌分析）
+- documenter-system.prompt.md - 技術翻譯員（功能解釋說明）
+- planner-system.prompt.md - 規劃顧問（開發成本評估）
+- refactorer-system.prompt.md - 品質稽核員（技術債分析）
+
+## 九大專業分析模板
+- api_analysis.prompt.md - API功能分析
+- use_case_mapping.prompt.md - 使用案例對應
+- data_flow_tracing.prompt.md - 資料流程追蹤
+- error_handling.prompt.md - 錯誤處理分析
+- performance_watch.prompt.md - 效能監控分析
+- security_auth.prompt.md - 安全認證檢查
+- versioning_governance.prompt.md - 版本治理建議
+- test_stub_generator.prompt.md - 測試範例生成
+
+## 標準使用SOP
+1. 選擇合適的核心顧問檔案
+2. 複製完整prompt內容到Chat
+3. 組合需要的專業模板
+4. 指定分析目標並執行
+5. 驗證輸出品質和格式
+```
+
 ### VitePress sidebar配置優化
 更新了sidebar配置，確保：
 - /guide/路徑下顯示完整的9個教學章節
@@ -125,3 +177,4 @@
 - **新增**: 構建測試通過(8.35秒)
 - **新增**: GitHub Pages章節導航完整可用
 - **新增**: 第1章介面操作指南提升PM學習體驗
+- **新增**: 第3章專業Prompt檔案使用體系建立，PM可實際操作執行專業分析
