@@ -19,11 +19,30 @@
 
 **本章將讓您在30分鐘內具備基礎的程式碼分析能力！**
 
-## 🛠️ 環境設定：Cursor Rules 配置
+## 🛠️ 環境設定：新版 Cursor Rules 配置
 
-### 第一步：建立 PM 專用的 .cursorrules 檔案
+### 第一步：了解新版 Cursor Rules 系統
 
-**步驟1：下載範例專案**
+新版 Cursor 提供三種規則類型：
+
+**🎯 專案規則 (Project Rules)**
+- 儲存在 `.cursor/rules/` 資料夾中
+- 使用 `.mdc` 格式撰寫
+- 可與專案一起進行版本控制
+- 適合團隊協作
+
+**👤 使用者規則 (User Rules)**
+- 在 Cursor Settings → Rules 中設定
+- 全域生效，對所有專案有效
+- 適合個人偏好設定
+
+**🧠 記憶 (Memories - Beta)**
+- 根據對話自動生成
+- 可在設定中查看和管理
+
+### 第二步：下載範例專案
+
+**步驟1：下載 Cloudy 範例專案**
 1. 前往 https://github.com/spyua/cloudy_homework
 2. 點擊綠色的 "Code" 按鈕
 3. 選擇 "Download ZIP" 下載專案壓縮檔
@@ -35,9 +54,39 @@
 3. 導航到解壓縮的資料夾，選擇整個 `cloudy_homework` 目錄
 4. 點擊 "選擇資料夾" 按鈕
 
-**步驟3：設置AI分析提示模板**
+### 第三步：設定 PM 專用 Cursor Rules
 
-在專案根目錄建立 `.cursorrules` 檔案，並設置以下內容：
+**方法一：透過 GUI 設定（推薦新手）**
+
+1. **開啟 Cursor Settings**
+   - 按 `Cmd + ,`（Mac）或 `Ctrl + ,`（Windows）
+   - 或點擊左下角齒輪圖示 → "Settings"
+
+2. **進入 Rules 設定**
+   - 點擊左側選單的 "Rules"
+   - 您會看到規則管理介面
+
+3. **新增 PM 分析規則**
+   - 點擊 "Add Rule" 按鈕
+   - **規則名稱**：`PM程式碼分析助手`
+   - **觸發條件**：選擇 "Always"（始終啟用）
+   - **規則內容**：複製下方完整規則
+
+**方法二：建立專案規則（推薦團隊）**
+
+1. **使用命令面板**
+   - 按 `Cmd + Shift + P`（Mac）或 `Ctrl + Shift + P`（Windows）
+   - 輸入 "New Cursor Rule"
+   - 選擇 "Create Project Rule"
+
+2. **系統會自動建立**
+   - `.cursor/rules/` 資料夾
+   - 新的 `.mdc` 檔案供您編輯
+   - 這個檔案可以與程式碼一起版本控制
+
+### 第四步：PM 專用規則內容
+
+將以下內容貼入規則編輯器：
 
 ```markdown
 # PM AI 逆向工程分析配置
@@ -116,32 +165,7 @@
 - "品質檢查": 使用refactorer-system角色
 ```
 
-**步驟4：設置專用分析提示模板**
-
-接下來需要將所有reverse-system-prompt目錄中的檔案設置為Cursor Rules：
-
-1. 在專案根目錄找到 `reverse-system-prompt` 資料夾
-2. 依序將以下檔案內容加入到 `.cursorrules` 檔案中：
-
-**核心分析角色模板**：
-- `analyzer-system.prompt.md` - 系統架構分析
-- `documenter-system.prompt.md` - 技術文件撰寫  
-- `planner-system.prompt.md` - 開發規劃評估
-- `refactorer-system.prompt.md` - 程式碼品質檢查
-
-**專用分析模板**：
-- `api_analysis.prompt.md` - API介面分析
-- `use_case_mapping.prompt.md` - 使用案例對應
-- `data_flow_tracing.prompt.md` - 資料流追蹤
-- `error_handling.prompt.md` - 錯誤處理分析
-- `performance_watch.prompt.md` - 效能監控
-- `security_auth.prompt.md` - 安全認證檢查
-- `versioning_governance.prompt.md` - 版本治理
-- `test_stub_generator.prompt.md` - 測試範例生成
-
-> 💡 **PM小提示**：這些模板會自動觸發，讓AI能夠從多個角度分析程式碼，提供完整的商業洞察。
-
-### 第二步：驗證設定
+### 第五步：驗證設定
 
 在 Cursor 中開啟任一程式檔案，輸入：
 ```
@@ -149,6 +173,43 @@
 ```
 
 **預期結果**：Cursor 應該以產品經理友善的方式回應，包含執行摘要、業務價值分析、技術實作概述和PM行動建議。
+
+## ⚡ 5分鐘快速設定指南
+
+> 💡 **忙碌的PM？** 使用這個超快速設定流程，5分鐘內開始分析程式碼！
+
+### 🚀 極速設定（推薦）
+1. **下載專案**: 前往 https://github.com/spyua/cloudy_homework → Download ZIP
+2. **開啟 Cursor**: 用 Cursor 開啟解壓縮的資料夾
+3. **設定規則**: 按 `Cmd/Ctrl + ,` → Rules → Add Rule → 複製下方規則
+4. **開始分析**: 對任何檔案說「PM分析這個檔案」
+
+### 📋 一鍵複製規則
+```markdown
+你是PM專用的程式碼分析助手。始終以以下格式回應：
+
+## 📋 執行摘要
+- 主要發現：[關鍵洞察]
+- 商業影響：[對產品的影響]
+- 建議優先順序：[高/中/低]
+
+## 🎯 業務價值分析
+- 核心功能：[用商業語言說明]
+- 使用者價值：[對用戶的好處]
+- 競爭優勢：[差異化點]
+
+## ⚙️ 技術實作概述
+- 複雜度評估：⭐⭐⭐ (1-5星)
+- 架構特點：[簡化說明]
+- 技術風險：[潛在問題]
+
+## 💡 PM行動建議
+- 短期行動：[立即可執行的步驟]
+- 中長期規劃：[策略性建議]
+- 風險緩解：[預防措施]
+
+避免技術術語，多用比喻和實例說明。
+```
 
 ## 🤖 PM 程式碼分析標準流程
 
@@ -391,7 +452,7 @@ A: 詳細解答
 ```
 PM分析 Cloudy 專案：
 
-@folder:tutorial-sample-project
+@folder
 
 請提供：
 1. 專案整體功能說明
@@ -411,7 +472,7 @@ PM分析 Cloudy 專案：
 ```
 PM分析帳戶服務的業務價值：
 
-@folder:tutorial-sample-project/cloudy-account
+@folder/cloudy-account
 
 重點分析：
 1. 這個服務解決什麼用戶需求？
@@ -426,7 +487,7 @@ PM分析帳戶服務的業務價值：
 ```
 生成文檔：為帳戶服務創建 API 文檔
 
-@file:tutorial-sample-project/cloudy-account/src/main/java/com/ck/account/controller/AccountController.java
+@file:cloudy-account/src/main/java/com/ck/account/controller/UserVerifyController.java
 
 按照 PM 文檔標準格式生成完整的 API 說明文檔
 ```
@@ -558,13 +619,28 @@ PM分析帳戶服務的業務價值：
 - [連結2](url)
 ```
 
-## 🔧 常見問題與解決方案
+## 🚀 新版 Rules 系統優勢
 
-### Q1: cursor rules 沒有生效？
+### ✨ 智慧觸發系統
+- **Always**: 始終啟用，適合核心分析規則
+- **Auto Attached**: 自動根據檔案類型觸發
+- **Agent Requested**: 由AI主動請求使用
+- **Manual**: 手動觸發，適合特殊分析
+
+### 🎯 更好的管理體驗
+- **GUI 介面**: 直觀的規則管理介面
+- **即時預覽**: 規則修改即時生效
+- **分類管理**: 使用者規則 vs 專案規則分離
+- **版本控制**: 專案規則可與程式碼一起管理
+
+### 🔧 常見問題與解決方案
+
+### Q1: 新版 Rules 沒有生效？
 **解決方案：**
-1. 確認 `.cursorrules` 檔案在專案根目錄
-2. 重新啟動 Cursor
-3. 清除快取：設定 → 清除快取
+1. **檢查規則狀態**: Settings → Rules → 確認規則已啟用
+2. **確認觸發條件**: 確保選擇了正確的觸發方式（Always/Auto等）
+3. **重新載入**: 按 `Cmd/Ctrl + Shift + P` → "Reload Window"
+4. **清除快取**: Settings → 清除所有快取並重啟
 
 ### Q2: AI 回應太技術性，看不懂？
 **解決方案：**

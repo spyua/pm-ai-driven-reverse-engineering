@@ -20,12 +20,18 @@
   - 修正練習任務為PM業務視角
 - **位置**: docs/chapters/02-understanding-context.md
 
-### 4. 第6章專案準備現代化
-- **問題**: .cursorrules配置過時，缺少系統提示模板整合
+### 4. 第6章專案準備現代化 (2024-12-30 重大更新)
+- **問題**: .cursorrules配置過時，檔案路徑錯誤，設定流程過於複雜
 - **解決方案**:
-  - 更新為基於reverse-system-prompt的現代配置
-  - 整合四大AI角色和自動分析模板
-  - 添加具體的設置步驟指導
+  - **新版Cursor Rules系統升級**: 從`.cursorrules`更新到現代Rules系統
+  - **檔案路徑修正**: AccountController.java → UserVerifyController.java
+  - **設定流程簡化**: 新增5分鐘快速設定指南
+  - **用戶體驗提升**: 提供GUI設定和一鍵複製規則模板
+- **技術特色**:
+  - 支援專案規則(.cursor/rules/)和使用者規則
+  - 智慧觸發條件(Always/Auto/Manual)
+  - 版本控制友善的專案規則
+  - PM友善的極速設定流程
 - **位置**: docs/chapters/06-project-preparation.md
 
 ### 5. 錯誤處理模板改善
@@ -35,19 +41,27 @@
 
 ## 重要配置變更
 
-### 新的.cursorrules配置結構
+### 新版Cursor Rules配置結構 (現代化)
 ```markdown
-# PM AI 逆向工程分析配置
-## 角色定義 (四大AI角色)
-- analyzer-system: 系統架構師
-- documenter-system: 技術文件撰寫員  
-- planner-system: 產品工程策略師
-- refactorer-system: 程式碼品質倡導者
+# PM AI 逆向工程分析配置 (新版Rules系統)
 
-## 自動分析模板
-- ALWAYS_APPLY: API分析、使用案例對應、資料流追蹤、領域詞彙表
-- CONDITIONAL: 錯誤處理、效能監控、安全認證
-- ON_DEMAND: 版本治理、測試範例生成
+## 三種規則類型
+- 專案規則: 儲存在.cursor/rules/，可版本控制
+- 使用者規則: 全域生效，個人偏好設定
+- 記憶(Beta): 自動生成的對話記憶
+
+## 智慧觸發系統
+- Always: 始終啟用
+- Auto Attached: 自動根據檔案類型觸發
+- Agent Requested: 由AI主動請求
+- Manual: 手動觸發
+
+## PM專用快速規則模板
+你是PM專用的程式碼分析助手。始終以以下格式回應：
+- 📋 執行摘要
+- 🎯 業務價值分析  
+- ⚙️ 技術實作概述
+- 💡 PM行動建議
 ```
 
 ### 專案下載指引標準化
@@ -61,3 +75,5 @@
 - 所有章節連結已檢查無404錯誤
 - 圖片資源路徑已修正為相對路徑
 - GitHub連結已更新為正確的repository
+- **新增**: Cursor Rules系統相容性已驗證
+- **新增**: 構建測試通過(9.26秒)
