@@ -132,6 +132,42 @@ mvn test
 4. 需要時使用專用提示（安全、效能、資料流等）
 5. 最後使用 `refactorer-system.prompt.md` 提供改進建議
 
+## 📚 教材產出行為模式
+
+> **重要**: 教材開發必須遵循標準化工作流程，確保教學內容的品質和一致性
+
+### 📋 標準化工作流程指引
+
+所有教材產出相關的標準化工作流程已移至專門的 `workflows/` 目錄：
+
+#### 🔄 [教材產出標準化工作流程](./workflows/content-development-workflow.md)
+- **核心原則**: CONTENT-SOURCE DRIVEN 開發方法
+- **標準流程**: 必須先參考 `.content-source/outlines/` 和 `.content-source/references/`
+- **品質控管**: 三階段品質驗證機制
+- **最佳實踐**: 用戶中心的教材設計原則
+
+#### 📂 [System Prompt 管理標準](./workflows/system-prompt-management.md)
+- **分類架構**: 四大核心 + 九大專業模板
+- **管理原則**: 所有PM練習用的System Prompt都放在 `reverse-system-prompt/`
+- **開發指南**: 標準格式和設計原則
+- **使用方法**: 單一、組合、自訂使用策略
+
+#### ✅ [教材品質保證檢查清單](./workflows/quality-assurance-checklist.md)
+- **強制執行**: 修改檔案後立即執行構建測試驗證
+- **影響評估**: 不同修改類型的檢查清單
+- **整合檢查**: 任務前中後的完整檢查機制
+- **工具支援**: 自動化檢查指令和腳本
+
+### ⚡ 核心要求
+
+**教材產出時必須：**
+1. **先參考內容來源**: 檢查 `.content-source/outlines/` 計畫，參考 `.content-source/references/` 資料
+2. **遵循標準流程**: 按照 `workflows/content-development-workflow.md` 執行
+3. **系統提示管理**: 確保相關System Prompt放入 `reverse-system-prompt/` 資料夾
+4. **品質驗證**: 使用 `workflows/quality-assurance-checklist.md` 進行檢查
+
+**記住：優質的教材不僅要傳授知識，更要培養PM在AI時代的核心能力！**
+
 ## 🧠 Serena Memory 管理規範
 
 > **重要**: 以下是我必須嚴格遵循的memory管理規則，避免創建重複和碎片化的記錄
@@ -356,24 +392,15 @@ mvn test
 
 ### 📝 檔案依賴關係地圖
 
-#### 核心檔案的依賴關係
+**核心檔案的依賴關係範例**
 ```
 01-installation-setup.md
-├── 直接依賴
-│   ├── chapters/index.md (章節狀態)
-│   ├── chapters/README.md (章節列表)  
-│   ├── guide/learning-path.md (學習路徑)
-│   └── .vitepress/config.ts (導航配置)
-├── 間接依賴
-│   ├── guide/index.md (教學概覽)
-│   ├── index.md (首頁介紹)
-│   └── resources/cursor-guide.md (相關工具指南)
-└── 記錄依賴
-    ├── progress_chapters memory
-    └── project_fixes_2025 memory
+├── 直接依賴: chapters/index.md, chapters/README.md, guide/learning-path.md
+├── 間接依賴: guide/index.md, index.md, resources/cursor-guide.md
+└── 記錄依賴: progress_chapters memory, project_fixes_2025 memory
 ```
 
-#### 關鍵交叉依賴
+**關鍵交叉依賴類型**
 - **章節順序**: 修改學習內容可能影響後續章節的前置知識
 - **技術版本**: 工具版本更新需要同步多個章節的說明
 - **學習路徑**: 難度或時間變更需要更新整個學習規劃
@@ -393,24 +420,17 @@ mvn test
 - 對整個專案品質標準的影響
 - 對未來維護和擴展的影響
 
-### 🛠️ 自動化檢查工具建議
+### 🛠️ 自動化檢查工具
 
-#### 可用的檢查指令
+**常用檢查指令**
 ```bash
-# 搜尋檔案引用
-grep -r "檔案名稱" docs/
-
-# 搜尋關鍵字引用  
-grep -r "關鍵概念" docs/ --include="*.md"
-
-# 檢查連結有效性
-npm run docs:build
-
-# 搜尋章節編號引用
-grep -r "第.*章\|Chapter.*" docs/
+grep -r "檔案名稱" docs/           # 搜尋檔案引用
+grep -r "關鍵概念" docs/ --include="*.md"  # 搜尋關鍵字引用
+npm run docs:build                   # 檢查連結有效性
+grep -r "第.*章\|Chapter.*" docs/     # 搜尋章節編號引用
 ```
 
-#### 建議的檢查腳本
+**建議的檢查腳本**
 - 連結有效性驗證腳本
 - 章節狀態一致性檢查
 - 交叉引用完整性驗證
@@ -418,13 +438,13 @@ grep -r "第.*章\|Chapter.*" docs/
 
 ### 💡 最佳實踐建議
 
-#### 預防性措施
+**預防性措施**
 1. **修改前做影響評估**: 永遠不要單獨修改檔案
 2. **批次更新**: 將相關修改集中在同一次commit
 3. **測試驗證**: 每次修改後必須執行完整構建測試
 4. **文檔記錄**: 在memory中詳細記錄修改的影響範圍
 
-#### 修復性措施
+**修復性措施**
 1. **發現遺漏時立即修復**: 不要拖延依賴檔案的更新
 2. **系統性檢查**: 定期檢查專案一致性
 3. **版本控制**: 重大修改前建立檢查點
@@ -504,17 +524,19 @@ L - Learning loops: 持續學習和方法改進
 └── 更新工作流程
 ```
 
-### 🎯 整合檢查清單
+### 🎯 統一檢查清單
 
-#### 任務開始前
+**任務開始前的強制檢查**
 - [ ] **Memory Scan**: 執行 `mcp__serena__list_memories`
 - [ ] **Relevant Memory Review**: 讀取相關記憶內容
 - [ ] **Dependency Search**: 使用 `grep -r "關鍵字" docs/`
 - [ ] **Impact Map**: 繪製完整的影響關係圖
 - [ ] **Update Plan**: 制定詳細的更新計劃
 - [ ] **Risk Assessment**: 評估修改風險等級
+- [ ] **用戶需求理解**: 我真的理解用戶的核心需求了嗎？
+- [ ] **使用者角度思考**: 我是站在使用者角度思考，還是技術實作角度？
 
-#### 執行過程中
+**執行過程中的即時驗證**
 - [ ] **Sequential Updates**: 按依賴順序執行修改
 - [ ] **Consistency Check**: 確保修改間的一致性
 - [ ] **Cross-reference Update**: 更新所有交叉引用
@@ -522,13 +544,17 @@ L - Learning loops: 持續學習和方法改進
 - [ ] **Link Validation**: 檢查所有連結有效性
 - [ ] **Content Alignment**: 確保內容邏輯一致
 
-#### 任務完成後
+**任務完成後的強制驗證**
 - [ ] **Memory Update**: 更新或創建相關記憶
 - [ ] **Dependency Log**: 記錄依賴關係變更
 - [ ] **Progress Update**: 更新專案進度記錄
 - [ ] **Quality Verification**: 完整的品質檢查
 - [ ] **Documentation Sync**: 同步所有相關文檔
 - [ ] **Learning Record**: 記錄經驗和改進點
+- [ ] **技術驗證**: 構建測試是否通過？(npm run docs:build)
+- [ ] **功能驗證**: 核心功能是否如預期工作？
+- [ ] **體驗驗證**: 使用流程是否順暢？
+- [ ] **一致性驗證**: 是否影響其他相關檔案？
 
 ### 🎓 能力注入提醒
 
@@ -600,25 +626,6 @@ methodology/
 
 **根本原因**: 用工程師思維而非產品思維，缺乏用戶同理心
 
-### 🔒 強制執行檢查清單
-
-#### 📋 接到任務時 (MUST執行)
-```
-□ 我真的理解用戶的核心需求了嗎？（不是我以為的需求）
-□ 這個設計對使用者來說是最簡單的操作流程嗎？
-□ 資訊架構是否清晰分離？（教學 vs 參考 vs 操作）  
-□ 使用者需要重複的動作是否已最小化？
-□ 我是站在使用者角度思考，還是技術實作角度？
-```
-
-#### 🧪 完成任務後 (MUST執行)
-```
-□ 技術驗證：構建測試是否通過？(npm run docs:build)
-□ 功能驗證：核心功能是否如預期工作？
-□ 體驗驗證：使用流程是否順暢？
-□ 一致性驗證：是否影響其他相關檔案？
-□ 記憶更新：是否已更新相關memory記錄？
-```
 
 ### ⚠️ 強制性承諾
 

@@ -144,6 +144,65 @@
 - **備份措施**: 保留原始問題檔案為prompts.md.backup供後續分析
 - **位置**: docs/resources/prompts.md (重建)
 
+### 11. CLAUDE.md 教材產出行為模式標準化 (2025-07-07 重大更新)
+- **問題**: CLAUDE.md缺少教材產出的標準化工作流程和行為模式指導
+- **用戶反饋**: "在產出教材時，應當要先參考.content-source的outline計畫，接著對應reference思考要怎麼產出教學內容"
+- **解決方案**:
+  - **新增專章**: "📚 教材產出行為模式" - 完整的教材開發標準化流程
+  - **核心原則**: CONTENT-SOURCE DRIVEN - 基於內容來源的驅動方式
+  - **標準化工作流程**: 5步驟教材產出流程，從outline到最終教材
+  - **內容來源體系**: 
+    - 規劃檔案(.content-source/outlines/) - 章節規劃和架構
+    - 參考資料(.content-source/references/) - 技術資料和範例
+    - 系統提示模板(reverse-system-prompt/) - PM實戰練習用提示
+  - **三階段品質控管**: 內容開發 → 內容產出 → 品質驗證
+  - **System Prompt管理原則**: 
+    - 標準化分類和命名規範
+    - PM友善的提示開發指南
+    - 實戰導向的內容設計
+  - **教材開發最佳實踐**: 用戶中心、循序漸進、實戰導向、工具整合、持續改進
+- **內容特色**:
+  - 完整的檢查清單和工作流程
+  - 系統化的品質保證機制
+  - 標準化的PM實戰提示管理
+  - 預防常見錯誤的指導原則
+- **影響範圍**:
+  - 確立了教材開發的標準化流程
+  - 規範了reverse-system-prompt資料夾的使用原則
+  - 提供了系統化的品質控管機制
+  - 建立了教材開發的最佳實踐體系
+- **位置**: CLAUDE.md (新增約180行教材產出行為模式指導)
+
+### 12. 標準化工作流程架構重組 (2025-07-07 重大更新)
+- **問題**: CLAUDE.md中教材產出內容過於冗長，影響文檔可讀性
+- **用戶反饋**: "標準化工作流程，新增一個docs資料夾在根目錄，並將內容存取這目錄，然後CLAUDE用路徑指引的方式"
+- **架構重組方案**:
+  - **創建專門目錄**: 根目錄新增 `workflows/` 資料夾存放所有標準化工作流程
+  - **內容模組化分離**: 將原本CLAUDE.md中的詳細內容移至專門檔案
+  - **路徑指引方式**: CLAUDE.md改為簡潔的路徑指引，指向具體的workflow文檔
+  - **結構化組織**: 按功能分類創建專門的workflow文檔
+- **新建檔案結構**:
+  - **workflows/README.md**: 工作流程目錄總覽和使用指引
+  - **workflows/content-development-workflow.md**: 教材產出標準化工作流程
+  - **workflows/system-prompt-management.md**: System Prompt管理標準
+  - **workflows/quality-assurance-checklist.md**: 教材品質保證檢查清單
+- **CLAUDE.md精簡化**:
+  - 移除詳細的工作流程內容
+  - 保留核心要求和路徑指引
+  - 強調必須遵循標準化流程的重要性
+  - 清楚指向各個workflow文檔的路徑
+- **內容特色**:
+  - 模組化設計，易於維護和更新
+  - 路徑指引清晰，快速定位需要的資訊
+  - 專門化分工，每個檔案專注特定功能
+  - 保持CLAUDE.md的簡潔性和可讀性
+- **影響範圍**:
+  - 建立了更清晰的專案架構組織
+  - 提升了文檔的可維護性和可讀性
+  - 強化了標準化工作流程的系統性
+  - 為未來工作流程擴展提供了良好基礎
+- **位置**: workflows/ (新建目錄)、CLAUDE.md (精簡化)
+
 ## 重要配置變更
 
 ### 新版Cursor Rules配置結構 (現代化)
@@ -195,23 +254,66 @@
 5. 驗證輸出品質和格式
 ```
 
-### 整合式專業分析架構 (新增)
+### 標準化工作流程架構 (新增)
+```markdown
+## workflows/ 目錄結構
+- README.md - 工作流程總覽和使用指引
+- content-development-workflow.md - 教材產出標準流程
+- system-prompt-management.md - System Prompt管理標準
+- quality-assurance-checklist.md - 品質保證檢查清單
+
+## 路徑指引方式
+CLAUDE.md 採用簡潔的路徑指引，指向具體的workflow文檔
+避免內容重複，提升文檔可維護性
+
+## 模組化設計原則
+- 專門化分工: 每個檔案專注特定功能
+- 結構化組織: 按功能分類創建專門文檔
+- 清晰導航: 路徑指引直接定位需要的資訊
+- 易於維護: 模組化設計便於更新和擴展
+```
+
+### 教材產出標準化體系 (更新)
+```markdown
+## 教材開發標準流程 (詳見 workflows/content-development-workflow.md)
+1. 檢查 .content-source/outlines/ 中的章節規劃
+2. 參考 .content-source/references/ 中的相關資料
+3. 根據outline制定具體的教學內容結構
+4. 整合參考資料，設計實用的教學範例
+5. 產出完整的教材內容到 docs/chapters/
+
+## 三階段品質控管 (詳見 workflows/quality-assurance-checklist.md)
+- Phase 1: 內容開發 (規劃研讀、參考整合、結構設計)
+- Phase 2: 內容產出 (教材撰寫、工具準備、實作設計)
+- Phase 3: 品質驗證 (內容審查、技術測試、體驗測試)
+
+## System Prompt管理原則 (詳見 workflows/system-prompt-management.md)
+- 使用場景明確，PM友善設計
+- 實戰導向，結果導向
+- 標準化分類和命名規範
+- 持續優化和改進機制
+```
+
+### 整合式專業分析架構 (更新)
 ```markdown
 ## 信息架構分離
 - 教學指導: docs/chapters/03-core-modes.md (學習方法和使用技巧)
 - 內容展示: docs/resources/prompts.md (完整prompt模板庫)
-- 清晰導航: VitePress配置確保兩者間的連結和發現性
+- 工作流程: workflows/ (標準化工作流程文檔)
+- 清晰導航: VitePress配置確保各部分間的連結和發現性
 
 ## 簡化用戶操作流程
 1. 設定一次整合式Cursor Rules
 2. 使用關鍵字觸發("架構分析"、"功能解讀"、"開發規劃"、"品質評估")
 3. 按需查閱prompts頁面的完整模板內容
-4. 自訂調整和組合使用
+4. 參考workflows目錄的標準化流程
+5. 自訂調整和組合使用
 
 ## 建構穩定性保障
 - 移除複雜HTML標籤，使用標準markdown
 - 本地建構驗證，確保無編譯錯誤
 - 備份機制，保留原始內容供問題分析
+- 模組化設計，降低單一檔案的複雜度
 ```
 
 ### VitePress sidebar配置優化
@@ -239,3 +341,5 @@
 - **新增**: 第3章專業Prompt檔案使用體系建立，PM可實際操作執行專業分析
 - **新增**: 專業Prompt模板庫架構重組，信息架構更合理
 - **新增**: GitHub Actions建構穩定性修復，確保持續部署正常運作
+- **新增**: CLAUDE.md教材產出行為模式標準化，確保高品質教材開發流程
+- **新增**: 標準化工作流程架構重組，提升專案文檔可維護性和模組化程度
