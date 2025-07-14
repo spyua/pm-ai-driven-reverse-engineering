@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'AI驅動逆向工程教學',
-  description: '使用AI工具進行程式碼逆向工程的完整教學系統',
+  description: '一本協助產品經理(PM)逆向工程程式碼，以精準理解專案範疇的實戰手冊。',
   lang: 'zh-TW',
   cleanUrls: true,
   
