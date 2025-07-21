@@ -116,8 +116,8 @@ Agent 的回應品質取決於您提供的上下文。它會自動分析：
 
 ### **FAQ / 常見問題**
 
-* **Q: Composer (編輯器) 介面去哪了？**
-    * A: 在舊版中，「Chat」(唯讀) 和「Composer」(手動編輯) 是分開的。現在，這兩個概念已與新的 Agent 模式合併為一個統一的「Agent」介面，功能更強大。過去的 `Ask` 模式類似於舊的 Chat，而 `Manual` 模式則對應舊的 Composer。
+* **Q: Agent (編輯器) 介面去哪了？**
+    * A: 在舊版中，「Chat」(唯讀) 和「Agent」(手動編輯) 是分開的。現在，這兩個概念已與新的 Agent 模式合併為一個統一的「Agent」介面，功能更強大。過去的 `Ask` 模式類似於舊的 Chat，而 `Manual` 模式則對應舊的 Agent。
 
 * **Q: Agent 處理完成後可以有通知嗎？**
     * A: 可以。請至 `Settings → Features → Chat → Play sound on finish` 開啟聲音通知 (此為 Beta 功能)。
