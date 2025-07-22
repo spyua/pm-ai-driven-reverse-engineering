@@ -127,7 +127,32 @@
 
 ---
 
-## 1.5 Cursor 介面操作基礎指南
+## 1.5 下載教學專案
+
+在我們深入探索 Cursor 的強大功能之前，您需要先將本課程的範例專案下載到您的電腦中。這個專案包含了我們後續章節將要分析的微服務程式碼。
+
+### 步驟說明
+
+1.  **前往專案的 GitHub 頁面**：
+    *   點擊此連結前往：[pm-ai-driven-reverse-engineering](https://github.com/your-username/pm-ai-driven-reverse-engineering)
+
+2.  **下載專案 ZIP 檔**：
+    *   在 GitHub 頁面右上方，找到綠色的 **`< > Code`** 按鈕並點擊它。
+    *   在下拉選單中，點擊 **`Download ZIP`**。
+    *   瀏覽器將會下載一個名為 `pm-ai-driven-reverse-engineering-main.zip` 的檔案。
+
+3.  **解壓縮檔案**：
+    *   找到下載的 ZIP 檔案，並將其解壓縮。您會得到一個名為 `pm-ai-driven-reverse-engineering-main` 的資料夾。
+
+4.  **在 Cursor 中開啟專案**：
+    *   在 Cursor 編輯器中選擇 `File` > `Open Folder`。
+    *   找到並選擇剛剛解壓縮出來的 `pm-ai-driven-reverse-engineering-main` 資料夾。
+
+    成功開啟後，您應該能在左側的檔案總管中看到完整的專案結構。
+
+---
+
+## 1.6 Cursor 介面操作基礎指南
 
 > 💡 **PM專用指南**：本節將幫助您快速掌握Cursor的核心操作，專注於日常工作中最實用的功能
 
