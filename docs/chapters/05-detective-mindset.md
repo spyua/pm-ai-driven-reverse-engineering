@@ -360,7 +360,7 @@ graph TD
 ```
 請分析Cloudy系統的檔案上傳功能，描述其基本功能和操作流程。
 
-@cloudy-files/src/main/java/com/example/upload/FileUploadController.java
+@cloudy-files/src/main/java/com/ck/file/controller/FilePorcessController.java
 ```
 
 **典型發現：**
@@ -719,7 +719,7 @@ graph TD
 目前實現基本滿足需求，但缺乏進階控制功能
 ```
 
-#### 🔗 應用技能4：系統性思考
+#### 🔗 技能4：系統性思考
 
 ```
 系統影響分析：
@@ -778,7 +778,7 @@ graph TD
 ```
 請從技術角度分析Cloudy系統的用戶認證實現：
 
-@cloudy-security/src/main/java/com/example/security/
+@cloudy-security/src/main/java/com/ck/security/
 
 重點關注：
 - 使用了什麼技術棧？
@@ -796,7 +796,7 @@ graph TD
 ```
 請從產品經理的角度分析Cloudy系統的用戶認證設計：
 
-@cloudy-security/src/main/java/com/example/security/
+@cloudy-security/src/main/java/com/ck/security/
 
 重點關注：
 - 為什麼選擇這種認證方式？
@@ -826,7 +826,7 @@ graph TD
 指令：
 「請描述Cloudy檔案上傳功能的基本用途和主要操作流程」
 
-@cloudy-files/src/main/java/com/example/upload/
+@cloudy-files/src/main/java/com/ck/file/controller/
 ```
 
 **記錄模板：**
@@ -887,7 +887,7 @@ graph TD
 請分析Cloudy系統的檔案存取權限控制實現，
 從中發現商業價值點並提出具體的產品改進建議：
 
-@cloudy-files/src/main/java/com/example/permission/
+@cloudy-files/src/main/java/com/ck/file/aop/LoginVeriftyAspect.java
 
 要求：
 1. 識別當前設計的商業邏輯

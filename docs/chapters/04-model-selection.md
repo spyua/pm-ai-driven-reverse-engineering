@@ -38,7 +38,7 @@
 
 在Cursor中，AI模型可以大致分為兩大類型，各有不同的「個性」和適用場景：
 
-#### 🧠 思考型模型（如 gemini-2.5-pro, o3）
+#### 🧠 思考型模型（如 Claude Sonnet 4.0, Claude Sonnet 4.0）
 
 **核心特性：**
 - **主動性強**：會主動提供額外建議和延伸思考
@@ -58,7 +58,7 @@
 - 💡 創新思考：功能創新、用戶體驗改進
 - 🔬 深度分析：複雜系統的邏輯梳理
 
-#### ⚡ 執行型模型（如 claude-4-sonnet, gpt-4.1）
+#### ⚡ 執行型模型（如 Claude Sonnet 4.0, GPT-4）
 
 **核心特性：**
 - **嚴格聽從指令**：精確按照要求執行任務
@@ -80,7 +80,7 @@
 
 ### 4.1.2 模型個性比較表
 
-| 特性 | 思考型 (gemini-2.5-pro) | 執行型 (claude-4-sonnet) |
+| 特性 | 思考型 (Claude Sonnet 4.0) | 執行型 (Claude Sonnet 4.0) |
 |------|-------------------------|--------------------------|
 | **主動性** | 🔴 高 - 會主動提供建議和延伸思考 | 🟡 中 - 按指令執行，較少延伸 |
 | **創意度** | 🔴 高 - 發散思維，多角度分析 | 🟡 中 - 聚焦任務，創意有限 |
@@ -103,21 +103,21 @@
 **🔍 新專案架構分析**
 ```
 任務：理解一個全新專案的技術架構
-推薦模型：gemini-2.5-pro
+推薦模型：Claude Sonnet 4.0
 原因：需要深度理解複雜架構，發現潛在問題
 ```
 
 **🏆 競品功能研究**
 ```
 任務：分析競爭對手的創新功能
-推薦模型：gemini-2.5-pro
+推薦模型：Claude Sonnet 4.0
 原因：需要創新視角和策略思考
 ```
 
 **👥 用戶需求探索**
 ```
 任務：從程式碼中反推用戶使用場景
-推薦模型：gemini-2.5-pro
+推薦模型：Claude Sonnet 4.0
 原因：需要同理心和洞察力
 ```
 
@@ -129,7 +129,7 @@
 ```
 請分析這個電商網站的商品推薦邏輯：
 
-@cloudy-account/src/main/java/com/example/recommendation/
+@cloudy-account/src/main/java/com/ck/account/
 
 從以下角度進行分析：
 1. 推薦算法的商業邏輯
@@ -154,21 +154,21 @@
 **📋 PRD文件撰寫**
 ```
 任務：撰寫標準格式的產品需求文件
-推薦模型：claude-4-sonnet
+推薦模型：Claude Sonnet 4.0
 原因：需要嚴格的文件格式和結構
 ```
 
 **📚 API規格文件**
 ```
 任務：整理技術API的使用說明
-推薦模型：claude-4-sonnet
+推薦模型：Claude Sonnet 4.0
 原因：要求精確性和一致性
 ```
 
 **📝 會議紀錄整理**
 ```
 任務：將討論內容整理成標準格式
-推薦模型：claude-4-sonnet
+推薦模型：Claude Sonnet 4.0
 原因：需要格式規範和結構化
 ```
 
@@ -181,7 +181,7 @@
 請按照標準PRD格式，撰寫用戶註冊功能的產品需求文件。
 
 基於以下程式碼分析：
-@cloudy-account/src/main/java/com/example/auth/
+@cloudy-account/src/main/java/com/ck/account/controller/
 
 要求包含：
 1. 功能概述
@@ -208,13 +208,13 @@
 **Step 1 (思考型)：** 創意和分析階段
 ```
 指令：「請分析用戶痛點，提出創新的解決方案」
-使用：gemini-2.5-pro
+使用：Claude Sonnet 4.0
 ```
 
 **Step 2 (執行型)：** 整理和產出階段
 ```
 指令：「請將上述解決方案整理成標準PRD格式」
-使用：claude-4-sonnet
+使用：Claude Sonnet 4.0
 ```
 
 #### 策略2：使用Auto模式
@@ -291,7 +291,7 @@ graph TD
 3. 提出改進建議
 4. 整理成可行動的建議清單
 
-@cloudy-files/src/main/java/com/example/upload/
+@cloudy-files/src/main/java/com/ck/file/
 ```
 
 **範例2：技術評估與決策支持**
@@ -378,8 +378,8 @@ graph LR
 
 | 任務類型 | 頻率 | 目前使用模型 | 滿意度 | 備註 |
 |---------|------|-------------|--------|------|
-| 架構分析 | 每週2-3次 | gemini-2.5-pro | ⭐⭐⭐⭐⭐ | 深度好，創意足 |
-| PRD撰寫 | 每週1次 | claude-4-sonnet | ⭐⭐⭐⭐ | 格式佳，但創意少 |
+| 架構分析 | 每週2-3次 | Claude Sonnet 4.0 | ⭐⭐⭐⭐⭐ | 深度好，創意足 |
+| PRD撰寫 | 每週1次 | Claude Sonnet 4.0 | ⭐⭐⭐⭐ | 格式佳，但創意少 |
 | 競品分析 | 每月2次 | Auto | ⭐⭐⭐ | 結果不一致 |
 
 **Step 2：測試不同模型的效果**
@@ -410,11 +410,11 @@ graph LR
 ## 我的AI模型選擇指南
 
 ### 日常任務對應
-- 系統架構分析 → gemini-2.5-pro
-- PRD文件撰寫 → claude-4-sonnet
+- 系統架構分析 → Claude Sonnet 4.0
+- PRD文件撰寫 → Claude Sonnet 4.0
 - 快速程式碼理解 → Auto模式
-- 創新功能設計 → gemini-2.5-pro
-- 會議記錄整理 → claude-4-sonnet
+- 創新功能設計 → Claude Sonnet 4.0
+- 會議記錄整理 → Claude Sonnet 4.0
 
 ### 個人偏好設定
 - 分析深度需求：高 → 優先思考型
@@ -453,7 +453,7 @@ graph LR
 請分析Cloudy Homework系統的用戶檔案上傳功能，
 評估其用戶體驗設計並提出改進建議。
 
-@cloudy-files/src/main/java/com/example/upload/FileUploadController.java
+@cloudy-files/src/main/java/com/ck/file/FileUploadController.java
 ```
 
 **📝 記錄表格：**
@@ -499,7 +499,7 @@ graph LR
 2. 評估安全性風險
 3. 整理成10分鐘簡報的結構
 
-@cloudy-security/src/main/java/com/example/security/
+@cloudy-security/src/main/java/com/ck/security/
 ```
 
 **📊 評估記錄：**
@@ -517,16 +517,16 @@ graph LR
 
 | 任務類型 | 推薦模型 | 理由說明 | 替代選擇 |
 |----------|----------|----------|----------|
-| **架構分析** | gemini-2.5-pro | 需要深度思考和系統性理解 | Auto（混合分析時） |
-| **PRD撰寫** | claude-4-sonnet | 要求格式規範和一致性 | - |
-| **用戶研究** | gemini-2.5-pro | 需要創新視角和洞察力 | - |
-| **API文件** | claude-4-sonnet | 技術文件需要精確性 | - |
-| **競品分析** | gemini-2.5-pro | 需要策略思考和比較分析 | Auto（快速分析時） |
-| **會議記錄** | claude-4-sonnet | 要求格式化和結構組織 | - |
+| **架構分析** | Claude Sonnet 4.0 | 需要深度思考和系統性理解 | Auto（混合分析時） |
+| **PRD撰寫** | Claude Sonnet 4.0 | 要求格式規範和一致性 | - |
+| **用戶研究** | Claude Sonnet 4.0 | 需要創新視角和洞察力 | - |
+| **API文件** | Claude Sonnet 4.0 | 技術文件需要精確性 | - |
+| **競品分析** | Claude Sonnet 4.0 | 需要策略思考和比較分析 | Auto（快速分析時） |
+| **會議記錄** | Claude Sonnet 4.0 | 要求格式化和結構組織 | - |
 | **功能設計** | Auto | 混合創意思考和實用性 | 分階段使用 |
-| **數據分析** | gemini-2.5-pro | 需要深度洞察和模式識別 | - |
-| **風險評估** | gemini-2.5-pro | 需要前瞻性思考和判斷 | - |
-| **流程優化** | gemini-2.5-pro | 需要系統性思考和創新 | Auto（標準流程時） |
+| **數據分析** | Claude Sonnet 4.0 | 需要深度洞察和模式識別 | - |
+| **風險評估** | Claude Sonnet 4.0 | 需要前瞻性思考和判斷 | - |
+| **流程優化** | Claude Sonnet 4.0 | 需要系統性思考和創新 | Auto（標準流程時） |
 
 ### 緊急情況的快速選擇
 
@@ -539,8 +539,8 @@ graph LR
 
 **🟡 一般緊急（5-15分鐘）**
 - 根據任務性質快速判斷：
-  - 分析類 → gemini-2.5-pro
-  - 產出類 → claude-4-sonnet
+  - 分析類 → Claude Sonnet 4.0
+  - 產出類 → Claude Sonnet 4.0
   - 混合類 → Auto
 
 **🟢 不緊急（>15分鐘）**
@@ -555,8 +555,8 @@ graph TD
     A[緊急任務] --> B{任務性質明確？}
     B -->|是| C{主要是分析還是產出？}
     B -->|否| D[使用Auto模式]
-    C -->|分析| E[gemini-2.5-pro]
-    C -->|產出| F[claude-4-sonnet]
+    C -->|分析| E[Claude Sonnet 4.0]
+    C -->|產出| F[Claude Sonnet 4.0]
     C -->|混合| G[Auto模式]
     D --> H[快速獲得結果]
     E --> H
@@ -801,8 +801,8 @@ graph TD
 
 ::: tip 💎 章節精華回顾
 **記住這個簡單公式：**
-- 🧠 **需要思考創新** → 思考型模型 (gemini-2.5-pro)
-- ⚡ **需要精確執行** → 執行型模型 (claude-4-sonnet)  
+- 🧠 **需要思考創新** → 思考型模型 (Claude Sonnet 4.0)
+- ⚡ **需要精確執行** → 執行型模型 (Claude Sonnet 4.0)  
 - 🤔 **不確定或混合** → Auto模式
 - ⏰ **時間緊迫** → Auto模式優先
 
